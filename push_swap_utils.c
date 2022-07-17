@@ -6,39 +6,39 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:52:51 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/05/18 22:38:44 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/17 22:10:29 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-void check_if_sorted(t_stack *stack)
+int check_if_sorted(t_stack *stack)
 {
-	int tmp;
 	int i;
 	
 	i = 0;
-	while(stack->arra[i])
+	while(i < stack->sizea - 1)
 	{
-		tmp = stack->arra[i];
-		stack->arra[i] = stack->arra[i + 1];
-		if (tmp < stack->arra[i])
-		{
-			write(1, "error", 5);
-			exit(0);
-		}		
+		if (stack->arra[i] > stack->arra[i + 1])
+			break;
+		i++;
+	}
+	if (i == stack->sizea - 1)
+	{	
+		write(2, "Your shit is sorted already\n", 28);
+		exit (0);
 	}
 }
 
-void fill_my_stack(t_stack *stack, char *str)
+void	push_swap_algo(t_stack *stack, t_stuff *extra)
 {
-	int i;
+	if (extra->len == 3)
+		three_sort(stack, extra);
+	else if (extra->len == 4)
+		four_sort(stack, extra);
+	else if (extra->len == 5)
+		five_sort(stack, extra);
+	else if (extra->len > 5)
+		chunk_sort(stack, extra);
 	
-	i = 0;
-
-	while(str[i])
-	{
-		stack->arra[i] = ft_atoi(str);
-		i++;
-	}
 }

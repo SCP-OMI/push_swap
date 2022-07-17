@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcharouh <mcharouh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:04:47 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/05/19 15:29:18 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/17 22:07:17 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,48 +14,48 @@
 
 int	main(int ac, char **av)
 {
-	t_stack stacks;
-	t_stuff *lobnani;
-	
-	lobnani = joiny_splity(av);
-	stacks.arra = malloc(sizeof(int) * lobnani->len);
-	while (lobnani->str1[lobnani->i])
-	{
-		stacks.arra[lobnani->i] = ft_atoi(lobnani->str1[lobnani->i]);
-		printf("%d\n", stacks.arra[lobnani->i]);
-		lobnani->i++;
-	}
-	
-	
-	//checking them errors #1
-	//fill_my_stack(&stacks, ft_split(str, ' '));
-	
+	t_stack	stack;
+	t_stuff	*extra;
+
+	extra = join_split(av);
+	fill_my_stack(&stack, extra);
+	if (check_dup(extra, &stack))
+		return (write(2, "Dups\n", 5));
+	check_if_sorted(&stack);
+	push_swap_algo(&stack, extra);
 }
 
-int	ft_strlon(char **str)
+t_stuff	*join_split(char **av)
 {
-	int i;
-	
-	i = 0;
-	while(str[i])
-		i++;
-	return(i);
+	t_stuff		*extra;
+
+	extra = malloc(sizeof(t_stuff));
+	extra->i = 1;
+	extra->str = ft_strdup("");
+	while (av[extra->i])
+	{
+		extra->str = ft_strjoin(extra->str, av[extra->i]);
+		extra->str = ft_strjoin(extra->str, " ");
+		extra->i++;
+	}
+	extra->i = 0;
+	extra->str1 = ft_split(extra->str, ' ');
+	extra->len = ft_strlon(extra->str1);
+	return (extra);
 }
 
-t_stuff *joiny_splity(char **av)
+void	fill_my_stack(t_stack *stacks, t_stuff *extra)
 {
-	t_stuff		*lobnani;
-	lobnani = malloc(sizeof(t_stuff));
-	lobnani->i = 1;
-	lobnani->str = ft_strdup("");
-	while(av[lobnani->i])
+	stacks->arra = malloc(sizeof(int) * extra->len);
+	stacks->arrb = malloc(sizeof(int) * extra->len);
+	extra->sorted_array = malloc(sizeof(int) * extra->len);
+	stacks->sizea = 0;
+	while (extra->str1[extra->i])
 	{
-		lobnani->str = ft_strjoin(lobnani->str, av[lobnani->i]);
-		lobnani->str = ft_strjoin(lobnani->str, " ");
-		lobnani->i++;
+		stacks->arra[extra->i] = ft_atoi(extra->str1[extra->i]);
+		extra->sorted_array[extra->i] = ft_atoi(extra->str1[extra->i]);
+		stacks->sizea++;
+		extra->i++;
 	}
-	lobnani->i = 0;
-	lobnani->str1 = ft_split(lobnani->str, ' ');
-	lobnani->len = ft_strlon(lobnani->str1);
-	return(lobnani);
+		stacks->sizeb = 0;
 }

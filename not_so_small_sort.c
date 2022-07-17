@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   not_so_small_sort.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 18:46:52 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/05/17 18:22:39 by mcharouh         ###   ########.fr       */
+/*   Created: 2022/06/12 19:42:02 by mcharouh          #+#    #+#             */
+/*   Updated: 2022/07/17 22:13:07 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include"push_swap.h"
 
-size_t	ft_strlen(const char *str)
+void	chunk_sort(t_stack *stack, t_stuff *extra)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	chunk_utils(stack, extra);
 }
