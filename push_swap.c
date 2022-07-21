@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:04:47 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/17 22:07:17 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/21 03:13:18 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	main(int ac, char **av)
 {
 	t_stack	stack;
 	t_stuff	*extra;
+	int i = 0;
 
 	extra = join_split(av);
 	fill_my_stack(&stack, extra);
@@ -23,6 +24,16 @@ int	main(int ac, char **av)
 		return (write(2, "Dups\n", 5));
 	check_if_sorted(&stack);
 	push_swap_algo(&stack, extra);
+	printf("stack a");
+	printf("%d\n", stack.arra[0]);
+	printf("%d\n", stack.arra[1]);
+	printf("%d\n", stack.arra[2]);
+	printf("%d\n", stack.arra[3]);
+	printf("%d\n", stack.arra[4]);
+	printf("%d\n", stack.arra[5]);
+	printf("%d\n", stack.arra[6]);
+	printf("%d\n", stack.arra[7]);
+	printf("%d\n", stack.arra[8]);
 }
 
 t_stuff	*join_split(char **av)

@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/omi/Desktop/Pushy'
 cc  -c push_swap.c -o push_swap.o
 cc  -c ft_split.c -o ft_split.o
@@ -8,14 +8,12 @@ cc  -c ft_strlen.c -o ft_strlen.o
 cc  -c ft_substr.c -o ft_substr.o
 cc  -c ft_atoi.c -o ft_atoi.o
 cc  -c error_handling.c -o error_handling.o
- 
+cc  -c helpersV2.c -o helpersV2.o
 cc  -c small_sort.c -o small_sort.o
- 
-make: *** No rule to make target 'helpersV2.o', needed by 'PUSH_SWAP'.
-
 cc  -c operations.c -o operations.o
 cc  -c not_so_small_sort.c -o not_so_small_sort.o
 cc  -c helpers.c -o helpers.o
 cc  -c push_swap_utils.c -o push_swap_utils.o
+cc  -Wall -Wextra -Werror push_swap.o ft_split.o ft_strdup.o ft_strjoin.o ft_strlen.o ft_substr.o ft_atoi.o error_handling.o helpersV2.o small_sort.o operations.o not_so_small_sort.o helpers.o push_swap_utils.o -g  -o PUSH_SWAP
 make: Leaving directory '/home/omi/Desktop/Pushy'
  

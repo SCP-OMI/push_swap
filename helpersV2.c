@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 16:35:17 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/17 22:15:15 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/21 03:09:02 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strlon(char **str)
 	return (i);
 }
 
-void	chunk_utils(t_stack *stack, t_stack *extra)
+void	chunk_utils(t_stack *stack, t_stuff *extra)
 {
 	stack->middle = stack->sizea / 2;
 	if (stack->sizea <= 10)
@@ -34,4 +34,14 @@ void	chunk_utils(t_stack *stack, t_stack *extra)
 	stack->start = stack->middle - stack->offset;
 	stack->end = stack->middle + stack->offset;
 	
+}
+
+void	offset_adjust(t_stack *stack, t_stuff *extra)
+{
+	stack->start = stack->start - stack->offset;
+	if (stack->start < 0)
+		stack->start = 0;
+	stack->end = stack->end + stack->offset;
+	if (stack->end > stack->len_arr)
+		stack->end = stack->len_arr - 1;
 }

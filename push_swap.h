@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:36:13 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/17 22:14:27 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/21 03:08:39 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ typedef struct s_stack
 	int	middle;
 	int	start;
 	int	end;
+	int	last_index;
+	int down;
 }	t_stack;
 
 typedef struct s_stuff
@@ -43,6 +45,7 @@ typedef struct s_stuff
 	int		i;
 	int		len;
 	int		tmp;
+	int		ret;
 }	t_stuff;
 
 int				ft_atoi(const char *str);
@@ -89,7 +92,14 @@ void			wiggle_small(t_stack *stack, t_stuff *extra);
 void			small_index(t_stack *stack);
 void			big_index(t_stack *stack);
 int				check_if_sorted(t_stack *stack);
-void			chunk_utils(t_stack *stack, t_stack *extra);
+void			chunk_sort(t_stack *stack, t_stuff *extra);
+void			chunk_utils(t_stack *stack, t_stuff *extra);
+void			cont(t_stack *stack, t_stuff *extra);
+int				check_max_val(t_stack *stack, t_stuff *extra);
+void			chunk_sort_V2(t_stack *stack, t_stuff *extra);
+void			offset_adjust(t_stack *stack, t_stuff *extra);
+
+
 
 
 
