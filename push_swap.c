@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:04:47 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/21 03:13:18 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/27 07:36:43 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,12 @@ int	main(int ac, char **av)
 		return (write(2, "Dups\n", 5));
 	check_if_sorted(&stack);
 	push_swap_algo(&stack, extra);
-	printf("stack a");
-	printf("%d\n", stack.arra[0]);
-	printf("%d\n", stack.arra[1]);
-	printf("%d\n", stack.arra[2]);
-	printf("%d\n", stack.arra[3]);
-	printf("%d\n", stack.arra[4]);
-	printf("%d\n", stack.arra[5]);
-	printf("%d\n", stack.arra[6]);
-	printf("%d\n", stack.arra[7]);
-	printf("%d\n", stack.arra[8]);
+	printf("---stack a--- ---stack b---\n");
+	while (i < stack.sizea)
+	{
+		printf("-----%d-----     -----%d-----\n", stack.arra[i], stack.arrb[i]);
+		i++;
+	}
 }
 
 t_stuff	*join_split(char **av)

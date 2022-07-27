@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:36:13 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/21 03:08:39 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/27 07:38:49 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,7 @@ void			unflush(t_stack *stack, int flag);
 //SORTING FCTS//
 void			push_swap_algo(t_stack *stack, t_stuff *extra);
 void			three_sort(t_stack *stack, t_stuff *extra);
-void			four_sort(t_stack *stack, t_stuff *extra);
-void			five_sort(t_stack *stack, t_stuff *extra);
+void			mid_sort(t_stack *stack, t_stuff *extra);
 void			fetch(t_stack *stack);
 void			wiggle_big(t_stack *stack, t_stuff *extra);
 void			wiggle_small(t_stack *stack, t_stuff *extra);

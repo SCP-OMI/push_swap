@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:09:19 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/17 00:01:27 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/27 07:38:35 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,23 @@ void	three_sort(t_stack *stack, t_stuff *extra)
 		reverse_rotate(stack, extra, 0);
 }
 
-void	five_sort(t_stack *stack, t_stuff *extra)
+void	mid_sort(t_stack *stack, t_stuff *extra)
 {
-	wiggle_small(stack, extra);
-	push_stack(stack, 1);
-	wiggle_small(stack, extra);
-	push_stack(stack, 1);
+	int count;
+	int relay;
+	relay = 0;
+	count = stack->sizea;
+	while (count != 3)
+	{
+		wiggle_small(stack, extra);
+		push_stack(stack, 1);
+		count--;
+		relay++;
+	}
 	three_sort(stack, extra);
-	push_stack(stack, 0);
-	push_stack(stack, 0);
-	
-}
-
-void	four_sort(t_stack *stack, t_stuff *extra)
-{
-	wiggle_small(stack, extra);
-	push_stack(stack, 1);
-	three_sort(stack, extra);
-	push_stack(stack, 0);
+	while (relay != 0)
+	{
+		push_stack(stack, 0);
+		relay--;
+	}	
 }

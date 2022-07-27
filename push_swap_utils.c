@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:52:51 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/17 22:10:29 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/27 07:34:44 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,9 @@ void	push_swap_algo(t_stack *stack, t_stuff *extra)
 {
 	if (extra->len == 3)
 		three_sort(stack, extra);
-	else if (extra->len == 4)
-		four_sort(stack, extra);
-	else if (extra->len == 5)
-		five_sort(stack, extra);
-	else if (extra->len > 5)
+	else if (extra->len >= 4 && extra->len <= 15)
+		mid_sort(stack, extra);
+	else if (extra->len > 15)
 		chunk_sort(stack, extra);
 	
 }
