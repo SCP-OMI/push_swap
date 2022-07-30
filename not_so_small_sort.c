@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:42:02 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/28 11:01:18 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/30 11:39:43 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,9 +98,11 @@ void	cont(t_stack *stack, t_stuff *extra)
 			stack->down++;
 		}
 		else if (extra->ret <= stack->sizeb / 2)
-			{printf("test\n");
-			exit(1);
-			rotate(stack, extra, 1);}
+			{
+				printf("test\n");
+				exit(1);
+				rotate(stack, extra, 1);	
+				}
 		else if (extra->ret > stack->sizeb / 2)
 			reverse_rotate(stack, extra, 1);
 		
