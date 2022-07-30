@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:50:07 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/15 20:57:43 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/27 12:30:12 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	reverse_rotate(t_stack *stack, t_stuff *extra, int flag)
 		write(1, "rrb\n", 4);
 }
 
-void	push_stack(t_stack *stack, int flag)
+void	push(t_stack *stack, int flag)
 {
 	if (flag == 0)
 	{	

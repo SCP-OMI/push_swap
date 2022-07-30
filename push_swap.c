@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:04:47 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/27 07:36:43 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/27 09:15:42 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int ac, char **av)
 	printf("---stack a--- ---stack b---\n");
 	while (i < stack.sizea)
 	{
-		printf("-----%d-----     -----%d-----\n", stack.arra[i], stack.arrb[i]);
+		printf("-----(%d)-----     -----(%d)-----\n", stack.arra[i], stack.arrb[i]);
 		i++;
 	}
 }

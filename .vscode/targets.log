@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 19 18:08:54 2022
+# Make data base, printed on Sat Jul 30 11:04:24 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/omi/Desktop/Pushy
+PWD = /home/omi/Desktop/push_swap
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -63,7 +63,7 @@ VSCODE_CODE_CACHE_PATH = /home/omi/.config/Code/CachedData/b06ae3b2d2dbfe28bca31
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.5URMP1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.LS9GQ1
 # default
 .LOADED := 
 # default
@@ -71,7 +71,7 @@ XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.5URMP1
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/omi/Desktop/Pushy
+CURDIR := /home/omi/Desktop/push_swap
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from 'makefile', line 5)
@@ -101,7 +101,7 @@ SNAP_REEXEC =
 # environment
 ZSH = /home/omi/.oh-my-zsh
 # environment
-VSCODE_PID = 6070
+VSCODE_PID = 4339
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -109,7 +109,7 @@ XDG_SESSION_TYPE = wayland
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/omi:@/tmp/.ICE-unix/2321,unix/omi:/tmp/.ICE-unix/2321
+SESSION_MANAGER = local/omi:@/tmp/.ICE-unix/2279,unix/omi:/tmp/.ICE-unix/2279
 # automatic
 *F = $(notdir $*)
 # environment
@@ -157,13 +157,12 @@ LC_TIME = en_GB.UTF-8
 # environment
 SNAP = /snap/code/101
 # environment
-INVOCATION_ID = b5f3b2d3d5b74805bb658a1baafd3dc4
+INVOCATION_ID = c78ee8a88b2e488e9388f26986d661fb
 # environment
 SNAP_REVISION = 101
 # environment
 SNAP_REAL_HOME = /home/omi
 # environment
- 
 USERNAME = omi
 # environment
 GNOME_SETUP_DISPLAY = :1
@@ -196,7 +195,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 2359
+SYSTEMD_EXEC_PID = 2301
 # makefile (from 'makefile', line 8)
 RM = rm -f
 # environment
@@ -214,11 +213,11 @@ SNAP_DATA = /var/snap/code/101
 # environment
 SNAP_CONTEXT = L9gFTvGqFHlEjrSWXmrLPhNDSQ8EPnJEjVahcxnqUvqY25xFf2-t
 # environment
-MANAGERPID = 2133
+MANAGERPID = 2191
 # environment
 LC_MEASUREMENT = en_GB.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 6018
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4274
 # environment
 PAGER = less
 # environment
@@ -232,7 +231,7 @@ CFLAGS = -Wall -Wextra -Werror
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/omi/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:36399
+JOURNAL_STREAM = 8:34320
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -279,6 +278,7 @@ LC_IDENTIFICATION = en_GB.UTF-8
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
 # Load=133/1024=13%, Rehash=0, Collisions=7/171=4%
+ 
 
 # Pattern-specific Variable Values
 
@@ -286,7 +286,7 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2056, inode 1573462): 21 files, no impossibilities.
+# . (device 2056, inode 1324084): 21 files, no impossibilities.
 
 # 21 files, no impossibilities in 1 directories.
 
@@ -427,7 +427,7 @@ ft_atoi.o:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-17 21:28:35.520487427
+#  Last modified 2022-07-27 09:14:32.597507035
 #  File has been updated.
 #  Successfully updated.
 
@@ -458,7 +458,7 @@ helpers.o:
 # Not a target:
 push_swap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-17 22:07:17.612123772
+#  Last modified 2022-07-27 09:15:42.868680439
 #  File has been updated.
 #  Successfully updated.
 
@@ -476,6 +476,6 @@ push_swap.c:
 # strcache performance: lookups = 63 / hit rate = 25%
 # hash-table stats:
 # Load=47/8192=1%, Rehash=0, Collisions=0/63=0%
-# Finished Make data base on Tue Jul 19 18:08:54 2022
+# Finished Make data base on Sat Jul 30 11:04:24 2022
 
  

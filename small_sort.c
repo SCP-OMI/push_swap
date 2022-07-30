@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:09:19 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/27 07:38:35 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/27 12:31:14 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,14 +49,14 @@ void	mid_sort(t_stack *stack, t_stuff *extra)
 	while (count != 3)
 	{
 		wiggle_small(stack, extra);
-		push_stack(stack, 1);
+		push(stack, 1);
 		count--;
 		relay++;
 	}
 	three_sort(stack, extra);
 	while (relay != 0)
 	{
-		push_stack(stack, 0);
+		push(stack, 0);
 		relay--;
 	}	
 }

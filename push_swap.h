@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:36:13 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/27 07:38:49 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/07/27 12:30:12 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int				arr_len(int **str);
 void			swap(t_stack *stack, int flag);
 void			rotate(t_stack *stack, t_stuff *extra, int flag);
 void			reverse_rotate(t_stack *stack, t_stuff *extra, int flag);
-void			push_stack(t_stack *stack, int flag);
+void			push(t_stack *stack, int flag);
 void			flush(t_stack *stack, int flag);
 void			unflush(t_stack *stack, int flag);
 
@@ -95,7 +95,7 @@ void			chunk_sort(t_stack *stack, t_stuff *extra);
 void			chunk_utils(t_stack *stack, t_stuff *extra);
 void			cont(t_stack *stack, t_stuff *extra);
 int				check_max_val(t_stack *stack, t_stuff *extra);
-void			chunk_sort_V2(t_stack *stack, t_stuff *extra);
+void			chunk_sort_v2(t_stack *stack, t_stuff *extra);
 void			offset_adjust(t_stack *stack, t_stuff *extra);
 
 
