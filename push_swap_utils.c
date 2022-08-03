@@ -6,21 +6,21 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:52:51 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/30 11:35:47 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/02 22:36:53 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-int check_if_sorted(t_stack *stack)
+void	check_if_sorted(t_stack *stack)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
-	while(i < stack->sizea - 1)
+	while (i < stack->sizea - 1)
 	{
 		if (stack->arra[i] > stack->arra[i + 1])
-			break;
+			break ;
 		i++;
 	}
 	if (i == stack->sizea - 1)
@@ -38,7 +38,6 @@ void	push_swap_algo(t_stack *stack, t_stuff *extra)
 		mid_sort(stack, extra);
 	else if (extra->len > 15)
 		chunk_sort(stack, extra);
-	
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)

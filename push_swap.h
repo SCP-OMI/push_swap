@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:36:13 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/27 12:30:12 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/02 22:42:29 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void			wiggle_big(t_stack *stack, t_stuff *extra);
 void			wiggle_small(t_stack *stack, t_stuff *extra);
 void			small_index(t_stack *stack);
 void			big_index(t_stack *stack);
-int				check_if_sorted(t_stack *stack);
+void			check_if_sorted(t_stack *stack);
 void			chunk_sort(t_stack *stack, t_stuff *extra);
 void			chunk_utils(t_stack *stack, t_stuff *extra);
 void			cont(t_stack *stack, t_stuff *extra);

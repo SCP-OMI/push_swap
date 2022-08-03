@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 22:02:30 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/16 23:49:58 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/02 22:35:34 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,27 +60,27 @@ void	fetch(t_stack *stack)
 
 void	small_index(t_stack *stack)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < stack->sizea - 1)
 	{
 		if (stack->arra[i] == stack->small_num)
-			break;
+			break ;
 		i++;
 	}
 	stack->small_index = i;
-	}
+}
 
 void	big_index(t_stack *stack)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < stack->sizea - 1)
 	{
-		if (stack->arra[i] == stack->big_num);
-			break;
+		if (stack->arra[i] == stack->big_num)
+			break ;
 		i++;
 	}
 	stack->big_index = i;

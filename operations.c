@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:50:07 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/27 12:30:12 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/02 22:34:41 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 void	swap(t_stack *stack, int flag)
 {
-	int tmp;
-	
+	int	tmp;
+
 	if (flag == 0)
 	{
 		tmp = stack->arra[0];
 		stack->arra[0] = stack->arra[1];
 		stack->arra[1] = tmp;
 		write(1, "sa\n", 3);
-		
 	}
 	else
 	{
@@ -35,7 +34,7 @@ void	swap(t_stack *stack, int flag)
 
 void	rotate(t_stack *stack, t_stuff *extra, int flag)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (flag == 0 && stack->sizea > 1)
@@ -49,7 +48,7 @@ void	rotate(t_stack *stack, t_stuff *extra, int flag)
 		stack->arra[stack->sizea - 1] = extra->tmp;
 		write (1, "ra\n", 3);
 	}
-	else if (flag == 1, stack->sizeb > 1)
+	else if (flag == 1 && stack->sizeb > 1)
 	{
 		extra->tmp = stack->arrb[0];
 		while (i < stack->sizeb)
@@ -64,13 +63,13 @@ void	rotate(t_stack *stack, t_stuff *extra, int flag)
 
 void	reverse_rotate(t_stack *stack, t_stuff *extra, int flag)
 {
-	int i;
-	
+	int	i;
+
 	if (flag == 0)
 	{
 		i = stack->sizea - 1;
 		extra->tmp = stack->arra[stack->sizea - 1];
-		while(i > 0)
+		while (i > 0)
 		{
 			stack->arra[i] = stack->arra[i - 1];
 			i--;
@@ -81,13 +80,13 @@ void	reverse_rotate(t_stack *stack, t_stuff *extra, int flag)
 	}
 		i = stack->sizeb - 1;
 		extra->tmp = stack->arrb[stack->sizeb - 1];
-		while(i > 0)
-		{
-			stack->arrb[i] = stack->arrb[i - 1];
-			i--;
-		}
-		stack->arrb[0] = extra->tmp;
-		write(1, "rrb\n", 4);
+	while (i > 0)
+	{
+		stack->arrb[i] = stack->arrb[i - 1];
+		i--;
+	}
+	stack->arrb[0] = extra->tmp;
+	write(1, "rrb\n", 4);
 }
 
 void	push(t_stack *stack, int flag)
@@ -100,7 +99,7 @@ void	push(t_stack *stack, int flag)
 		stack->sizea++;
 		stack->sizeb--;
 		write(1, "pa\n", 3);
-		}
+	}
 	else if (flag == 1)
 	{
 		flush(stack, flag);
@@ -114,8 +113,8 @@ void	push(t_stack *stack, int flag)
 
 void	flush(t_stack *stack, int flag)
 {
-	int i;
-	
+	int	i;
+
 	if (flag == 0)
 	{
 		i = stack->sizea - 1;
