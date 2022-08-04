@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:09:19 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/07/27 12:31:14 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/04 04:12:26 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	three_sort(t_stack *stack, t_stuff *extra)
 {
-	int one;
+	int	one;
 	int	two;
 	int	three;
 
 	one = stack->arra[0];
 	two = stack->arra[1];
 	three = stack->arra[2];
-	
+
 	if ((one > two) && (two < three) && (one < three))
 		swap(stack, 0);
 	else if ((one > two) && (two > three))
@@ -42,8 +42,9 @@ void	three_sort(t_stack *stack, t_stuff *extra)
 
 void	mid_sort(t_stack *stack, t_stuff *extra)
 {
-	int count;
-	int relay;
+	int	count;
+	int	relay;
+
 	relay = 0;
 	count = stack->sizea;
 	while (count != 3)

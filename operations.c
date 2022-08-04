@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:50:07 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/02 22:34:41 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/04 04:48:24 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,7 @@ void	flush(t_stack *stack, int flag)
 		while (i > -1)
 		{
 			stack->arra[i + 1] = stack->arra[i];
-			i--; 
+			i--;
 		}
 	}
 	else if (flag == 1)
@@ -130,15 +130,15 @@ void	flush(t_stack *stack, int flag)
 		while (i > -1)
 		{
 			stack->arrb[i + 1] = stack->arrb[i];
-			i--; 
+			i--;
 		}
 	}
 }
 
 void	unflush(t_stack *stack, int flag)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	if (flag == 0)
 	{

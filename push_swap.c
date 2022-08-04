@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:04:47 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/03 00:50:53 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/04 22:27:03 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int ac, char **av)
 	check_if_sorted(&stack);
 	push_swap_algo(&stack, extra);
 	printf("---stack a--- ---stack b---\n");
-	while (i < stack.sizeb)
+	while (i < extra->len)
 	{
 		printf("-----(%d)-----     -----(%d)-----\n", stack.arra[i], stack.arrb[i]);
 		i++;

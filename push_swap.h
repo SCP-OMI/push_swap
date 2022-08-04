@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:36:13 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/02 22:42:29 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/04 05:20:25 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void			check_if_sorted(t_stack *stack);
 void			chunk_sort(t_stack *stack, t_stuff *extra);
 void			chunk_utils(t_stack *stack, t_stuff *extra);
 void			cont(t_stack *stack, t_stuff *extra);
-int				check_max_val(t_stack *stack, t_stuff *extra);
+int				check_max_val_index(t_stack *stack, t_stuff *extra);
 void			chunk_sort_v2(t_stack *stack, t_stuff *extra);
 void			offset_adjust(t_stack *stack, t_stuff *extra);
 

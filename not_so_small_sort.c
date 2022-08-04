@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:42:02 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/03 00:52:07 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/04 05:45:05 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,44 @@
 void	chunk_sort(t_stack *stack, t_stuff *extra)
 {
 	chunk_utils(stack, extra);
-	while (stack->sizea != 3)
+	while (stack->sizea != 0)
 	{
-		//printf("%d\n", stack->sizea);
-		while (stack->sizeb < stack->end - stack->start + 1)
+		while (stack->sizeb < (stack->end - stack->start) + 1)
 		{
 			if (stack->arra[0] >= extra->sorted_array[stack->start]
 				&& stack->arra[0] <= extra->sorted_array[stack->end])
 			{
 				push(stack, 1);
-				if (stack->arrb[0] >= extra->sorted_array[stack->start]
-					&& stack->arrb[0] < extra->sorted_array[stack->middle])
+				if (stack->arrb[0] < extra->sorted_array[stack->middle])
 					rotate(stack, extra, 1);
 			}
 			else
+			{
 				rotate(stack, extra, 0);
-			offset_adjust(stack, extra);
+			}
+			// printf("this is your head A val : %d\n", stack->arra[0]);
+			// printf("this is your sorted start val : %d\n", extra->sorted_array[stack->start]);
+			// printf("this is your sorted end val : %d\n",  extra->sorted_array[stack->end]);
+			// printf("this is your len %d\n", stack->len_arr);
+			// printf("this is your sizeb %d\n", stack->sizeb);
+			// printf("this is the start :%d\n", stack->start);
+			// printf("this is the middle :%d\n", stack->middle);
+			// printf("this is the offset :%d\n", stack->offset);
+			// int i = 0;
+			// while (i < stack->sizea)
+			// {
+			// 	printf("*%d-%d* ", extra->sorted_array[i], i);
+			// 	i++;
+			// }
+			// printf("\n");
+			// while (i < stack->sizeb)
+			// {
+			// 	printf("%d ", stack->arrb[i]);
+			// 	i++;
+			// }
+			// printf("\n");
 		}
+		offset_adjust(stack, extra);
 	}
 	chunk_sort_v2(stack, extra);
 }
@@ -42,12 +63,10 @@ void	chunk_sort_v2(t_stack *stack, t_stuff *extra)
 	stack->down = 0;
 	while (stack->sizeb < 0 || stack->down != 0)
 	{
-		extra->ret = check_max_val(stack, extra);
+		printf("ij\n");
+		extra->ret = check_max_val_index(stack, extra);
 		if (extra->ret != -1)
-		{
-			printf("hi\n");
 			cont(stack, extra);
-		}
 		else
 		{
 			if (stack->down > 0)
@@ -60,7 +79,7 @@ void	chunk_sort_v2(t_stack *stack, t_stuff *extra)
 	}
 }
 
-int	check_max_val(t_stack *stack, t_stuff *extra)
+int	check_max_val_index(t_stack *stack, t_stuff *extra)
 {
 	int	i;
 
@@ -78,24 +97,21 @@ void	cont(t_stack *stack, t_stuff *extra)
 {
 	while (1)
 	{
+		printf("hi there\n");
 		if (extra->sorted_array[stack->last_index] == stack->arrb[0])
 		{
 			push(stack, 0);
 			stack->last_index--;
-			return ;
+			//return ;
 		}
 		if (stack->down == 0 || stack->arrb[0] > stack->arra[stack->sizea - 1])
 		{
 			push(stack, 0);
-			//printf("hiV2\n");
 			rotate(stack, extra, 0);
-			exit(1);
 			stack->down++;
 		}
 		else if (extra->ret <= stack->sizeb / 2)
 		{
-			//printf("test\n");
-			exit(1);
 			rotate(stack, extra, 1);
 		}
 		else if (extra->ret > stack->sizeb / 2)

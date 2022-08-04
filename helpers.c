@@ -6,22 +6,22 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 22:02:30 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/02 22:35:34 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/04 04:56:46 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	wiggle_big(t_stack *stack, t_stuff *extra)
-{
-	while (stack->arra[0] != stack->big_num)
-	{
-		if (stack->big_index > 2)
-			reverse_rotate(stack, extra, 0);
-		else if (stack->big_index < 3)
-			rotate(stack, extra, 0);
-	}
-}
+// void	wiggle_big(t_stack *stack, t_stuff *extra)
+// {
+// 	while (stack->arra[0] != stack->big_num)
+// 	{
+// 		if (stack->big_index > 2)
+// 			reverse_rotate(stack, extra, 0);
+// 		else if (stack->big_index < 3)
+// 			rotate(stack, extra, 0);
+// 	}
+// }
 
 void	wiggle_small(t_stack *stack, t_stuff *extra)
 {
@@ -37,8 +37,8 @@ void	wiggle_small(t_stack *stack, t_stuff *extra)
 
 void	fetch(t_stack *stack)
 {
-	int i;
-	
+	int	i;
+
 	stack->small_num = stack->arra[0];
 	i = 0;
 	while (i < stack->sizea)
