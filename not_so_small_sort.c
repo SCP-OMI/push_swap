@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:42:02 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/04 05:45:05 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/05 19:59:46 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,19 +59,21 @@ void	chunk_sort(t_stack *stack, t_stuff *extra)
 
 void	chunk_sort_v2(t_stack *stack, t_stuff *extra)
 {
-	stack->last_index = stack->sizea - 1;
+	stack->last_index = stack->len_arr - 2;
 	stack->down = 0;
-	while (stack->sizeb < 0 || stack->down != 0)
+	while (stack->sizeb > 0 || stack->down != 0)
 	{
-		printf("ij\n");
 		extra->ret = check_max_val_index(stack, extra);
 		if (extra->ret != -1)
+		{
 			cont(stack, extra);
+			exit(1);
+		}
 		else
 		{
 			if (stack->down > 0)
 			{
-				reverse_rotate(stack, extra, 0);
+				reverse_rotate(stack, extra, 1);
 				stack->down--;
 				stack->last_index--;
 			}
@@ -97,7 +99,7 @@ void	cont(t_stack *stack, t_stuff *extra)
 {
 	while (1)
 	{
-		printf("hi there\n");
+		printf("this is your ret %d\n", extra->ret);
 		if (extra->sorted_array[stack->last_index] == stack->arrb[0])
 		{
 			push(stack, 0);
@@ -115,6 +117,7 @@ void	cont(t_stack *stack, t_stuff *extra)
 			rotate(stack, extra, 1);
 		}
 		else if (extra->ret > stack->sizeb / 2)
+			exit (1);
 			reverse_rotate(stack, extra, 1);
 	}
 }
