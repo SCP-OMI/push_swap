@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:42:02 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/05 19:59:46 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/05 23:48:42 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	chunk_sort(t_stack *stack, t_stuff *extra)
 		}
 		offset_adjust(stack, extra);
 	}
+	exit(1);
 	chunk_sort_v2(stack, extra);
 }
 
