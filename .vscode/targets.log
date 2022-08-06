@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 30 11:04:24 2022
+# Make data base, printed on Fri Aug  5 23:47:03 2022
 
 # Variables
 
@@ -39,13 +39,13 @@ QT_ACCESSIBILITY = 1
 # environment
 SNAP_INSTANCE_NAME = code
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/101/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/103/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/omi/Desktop/push_swap
+PWD = /home/omi/push_swap
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -59,11 +59,11 @@ OLDPWD = /home/omi
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/omi/.config/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+VSCODE_CODE_CACHE_PATH = /home/omi/.config/Code/CachedData/da76f93349a72022ca4670c1b84860304616aaa2
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.LS9GQ1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.R291P1
 # default
 .LOADED := 
 # default
@@ -71,11 +71,11 @@ XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.LS9GQ1
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/omi/Desktop/push_swap
+CURDIR := /home/omi/push_swap
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from 'makefile', line 5)
-SRCS = push_swap.c ft_split.c ft_strdup.c ft_strjoin.c ft_strlen.c ft_substr.c ft_atoi.c error_handling.c helpersV2.c small_sort.c operations.c not_so_small_sort.c helpers.c push_swap_utils.c
+SRCS = push_swap.c ft_split.c ft_substr.c ft_atoi.c error_handling.c helpersV2.c small_sort.c operations.c not_so_small_sort.c helpers.c push_swap_utils.c
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -101,7 +101,7 @@ SNAP_REEXEC =
 # environment
 ZSH = /home/omi/.oh-my-zsh
 # environment
-VSCODE_PID = 4339
+VSCODE_PID = 8949
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -109,7 +109,7 @@ XDG_SESSION_TYPE = wayland
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/omi:@/tmp/.ICE-unix/2279,unix/omi:/tmp/.ICE-unix/2279
+SESSION_MANAGER = local/omi:@/tmp/.ICE-unix/2494,unix/omi:/tmp/.ICE-unix/2494
 # automatic
 *F = $(notdir $*)
 # environment
@@ -155,11 +155,11 @@ SNAP_USER_COMMON = /home/omi/snap/code/common
 # environment
 LC_TIME = en_GB.UTF-8
 # environment
-SNAP = /snap/code/101
+SNAP = /snap/code/103
 # environment
-INVOCATION_ID = c78ee8a88b2e488e9388f26986d661fb
+INVOCATION_ID = dfb250971b1d4c8482bf11c35d237a65
 # environment
-SNAP_REVISION = 101
+SNAP_REVISION = 103
 # environment
 SNAP_REAL_HOME = /home/omi
 # environment
@@ -195,7 +195,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 2301
+SYSTEMD_EXEC_PID = 2515
 # makefile (from 'makefile', line 8)
 RM = rm -f
 # environment
@@ -209,29 +209,29 @@ MAKE_VERSION := 4.3
 # environment
 DISABLE_WAYLAND = 1
 # environment
-SNAP_DATA = /var/snap/code/101
+SNAP_DATA = /var/snap/code/103
 # environment
 SNAP_CONTEXT = L9gFTvGqFHlEjrSWXmrLPhNDSQ8EPnJEjVahcxnqUvqY25xFf2-t
 # environment
-MANAGERPID = 2191
+MANAGERPID = 2368
 # environment
 LC_MEASUREMENT = en_GB.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4274
+GIO_LAUNCHED_DESKTOP_FILE_PID = 8901
 # environment
 PAGER = less
 # environment
-_ = /snap/code/101/usr/share/code/code
+_ = /snap/code/103/usr/share/code/code
 # environment
 LC_PAPER = en_GB.UTF-8
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'makefile', line 3)
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/omi/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:34320
+JOURNAL_STREAM = 8:37940
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -243,11 +243,11 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-9b433434-1.69.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-9b433434-1.70.0-main.sock
 # environment
 SNAP_NAME = code
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/101/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/103/usr/share/glib-2.0/schemas
 # environment
 PAPERSIZE = a4
 # default
@@ -255,7 +255,7 @@ PAPERSIZE = a4
 # automatic
 <F = $(notdir $<)
 # environment
-SNAP_VERSION = b06ae3b2
+SNAP_VERSION = da76f933
 # default
 SUFFIXES := 
 # environment
@@ -267,7 +267,7 @@ SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # environment
-SNAP_USER_DATA = /home/omi/snap/code/101
+SNAP_USER_DATA = /home/omi/snap/code/103
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -277,8 +277,7 @@ LC_IDENTIFICATION = en_GB.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=133/1024=13%, Rehash=0, Collisions=7/171=4%
- 
+# Load=133/1024=13%, Rehash=0, Collisions=8/175=5%
 
 # Pattern-specific Variable Values
 
@@ -286,9 +285,10 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2056, inode 1324084): 21 files, no impossibilities.
+# . (device 2056, inode 1448894): 30 files, no impossibilities.
+ 
 
-# 21 files, no impossibilities in 1 directories.
+# 30 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -300,34 +300,52 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Files
 
 # Not a target:
-error_handling.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+push_swap_utils.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
-not_so_small_sort.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+small_sort.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+
+error_handling.o: error_handling.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'error_handling'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
+
+not_so_small_sort.o: not_so_small_sort.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'not_so_small_sort'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
+
+helpersV2.o: helpersV2.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'helpersV2'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
 
 # Not a target:
-helpersV2.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-ft_strlen.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-ft_strdup.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+error_handling.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
 
 clean:
 #  Implicit rule search has not been done.
@@ -335,6 +353,13 @@ clean:
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 18):
 		@$(RM) $(OBJS)
+
+# Not a target:
+helpers.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
 
 re: fclean all
 #  Implicit rule search has not been done.
@@ -344,43 +369,36 @@ re: fclean all
 push_swap.o: push_swap.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'push_swap'
-#  File does not exist.
+#  Last modified 2022-08-05 23:46:49.890714862
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := push_swap.o
-# automatic
-# * := push_swap
-# automatic
-# < := push_swap.c
-# automatic
-# + := push_swap.c
-# automatic
-# % := 
-# automatic
-# ^ := push_swap.c
-# automatic
-# ? := push_swap.c
-# automatic
-# | := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/14=14%
+#  Successfully updated.
 #  recipe to execute (from 'makefile', line 13):
 		@$(CC)  -c $< -o $@
 
-# Not a target:
-ft_strjoin.o:
+PUSH_SWAP: push_swap.o ft_split.o ft_substr.o ft_atoi.o error_handling.o helpersV2.o small_sort.o operations.o not_so_small_sort.o helpers.o push_swap_utils.o
 #  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-PUSH_SWAP: push_swap.o ft_split.o ft_strdup.o ft_strjoin.o ft_strlen.o ft_substr.o ft_atoi.o error_handling.o helpersV2.o small_sort.o operations.o not_so_small_sort.o helpers.o push_swap_utils.o
-#  Implicit rule search has not been done.
-#  File does not exist.
+#  Implicit/static pattern stem: ''
+#  Last modified 2022-08-05 23:46:49.886715256
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := PUSH_SWAP
+# automatic
+# * := 
+# automatic
+# < := push_swap.o
+# automatic
+# + := push_swap.o ft_split.o ft_substr.o ft_atoi.o error_handling.o helpersV2.o small_sort.o operations.o not_so_small_sort.o helpers.o push_swap_utils.o
+# automatic
+# % := 
+# automatic
+# ^ := push_swap.o ft_split.o ft_substr.o ft_atoi.o error_handling.o helpersV2.o small_sort.o operations.o not_so_small_sort.o helpers.o push_swap_utils.o
+# automatic
+# ? := push_swap.o ft_split.o ft_substr.o ft_atoi.o error_handling.o helpersV2.o small_sort.o operations.o not_so_small_sort.o helpers.o push_swap_utils.o
+# automatic
+# | := 
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+# Load=8/32=25%, Rehash=0, Collisions=3/16=19%
 #  recipe to execute (from 'makefile', line 16):
 		@$(CC)  $(CFLAGS) $(OBJS) -g  -o $(NAME)
 
@@ -390,11 +408,14 @@ PUSH_SWAP: push_swap.o ft_split.o ft_strdup.o ft_strjoin.o ft_strlen.o ft_substr
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-push_swap_utils.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+push_swap_utils.o: push_swap_utils.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'push_swap_utils'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
 
 all: PUSH_SWAP
 #  Command line target.
@@ -403,7 +424,7 @@ all: PUSH_SWAP
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
 
 fclean: clean
 #  Implicit rule search has not been done.
@@ -413,44 +434,110 @@ fclean: clean
 		@$(RM) $(NAME)
 
 # Not a target:
-operations.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-ft_atoi.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-makefile:
+operations.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-27 09:14:32.597507035
+#  Last modified 2022-08-05 23:46:49.890714862
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-ft_split.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+helpersV2.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
-small_sort.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+ft_atoi.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+
+operations.o: operations.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'operations'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
+
+ft_atoi.o: ft_atoi.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ft_atoi'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
 
 # Not a target:
-ft_substr.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+not_so_small_sort.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
-helpers.o:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+
+ft_split.o: ft_split.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ft_split'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
+
+# Not a target:
+ft_split.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+
+small_sort.o: small_sort.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'small_sort'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
+
+ft_substr.o: ft_substr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ft_substr'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
+
+# Not a target:
+ft_substr.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+
+helpers.o: helpers.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'helpers'
+#  Last modified 2022-08-05 23:46:49.890714862
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 13):
+		@$(CC)  -c $< -o $@
+
+# Not a target:
+.SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -458,24 +545,24 @@ helpers.o:
 # Not a target:
 push_swap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-27 09:15:42.868680439
+#  Last modified 2022-08-05 23:46:49.890714862
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=23/1024=2%, Rehash=0, Collisions=0/56=0%
+# Load=30/1024=3%, Rehash=0, Collisions=0/91=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 47 / storage = 520 B / avg = 11 B
-# current buf: size = 8162 B / used = 520 B / count = 47 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 51 / storage = 562 B / avg = 11 B
+# current buf: size = 8162 B / used = 562 B / count = 51 / avg = 11 B
 
-# strcache performance: lookups = 63 / hit rate = 25%
+# strcache performance: lookups = 100 / hit rate = 49%
 # hash-table stats:
-# Load=47/8192=1%, Rehash=0, Collisions=0/63=0%
-# Finished Make data base on Sat Jul 30 11:04:24 2022
+# Load=51/8192=1%, Rehash=0, Collisions=0/100=0%
+# Finished Make data base on Fri Aug  5 23:47:03 2022
 
  
