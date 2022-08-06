@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:52:51 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/03 03:02:17 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/06 04:31:03 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	check_if_sorted(t_stack *stack)
 
 void	push_swap_algo(t_stack *stack, t_stuff *extra)
 {
+	if (extra->len == 2)
+		two_sort(stack, extra);
 	if (extra->len == 3)
 		three_sort(stack, extra);
 	else if (extra->len >= 4 && extra->len <= 15)

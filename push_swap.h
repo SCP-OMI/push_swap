@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:36:13 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/04 05:20:25 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/06 04:32:24 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_stack
 	int	start;
 	int	end;
 	int	last_index;
-	int down;
+	int	down;
 }	t_stack;
 
 typedef struct s_stuff
@@ -56,8 +56,6 @@ char			**ft_split(char const *s, char c);
 void			fill_my_stack(t_stack *stack, t_stuff *extra);
 int				ft_strlon(char **str);
 t_stuff			*join_split(char **av);
-void			sort(t_stuff *extra, t_stack *data);
-
 //FT_SPLIT STUFF//
 char			**ft_split(char const *s, char c);
 static void		char_count(const char *s, char c, char	**split);
@@ -66,13 +64,10 @@ static size_t	word_count(char const *s, char c);
 size_t			ft_strlen(const char *str);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strdup(const char *s);
-
 //HELPER FUNCTIONS//
-
 int				arr_len(int **str);
-
 //OPERATIONS//
-
+void			sort(t_stuff *extra, t_stack *data);
 void			swap(t_stack *stack, int flag);
 void			rotate(t_stack *stack, t_stuff *extra, int flag);
 void			reverse_rotate(t_stack *stack, t_stuff *extra, int flag);
@@ -80,9 +75,9 @@ void			push(t_stack *stack, int flag);
 void			flush(t_stack *stack, int flag);
 void			unflush(t_stack *stack, int flag);
 
-
 //SORTING FCTS//
 void			push_swap_algo(t_stack *stack, t_stuff *extra);
+void			two_sort(t_stack *stack, t_stuff *extra);
 void			three_sort(t_stack *stack, t_stuff *extra);
 void			mid_sort(t_stack *stack, t_stuff *extra);
 void			fetch(t_stack *stack);
@@ -97,9 +92,4 @@ void			cont(t_stack *stack, t_stuff *extra);
 int				check_max_val_index(t_stack *stack, t_stuff *extra);
 void			chunk_sort_v2(t_stack *stack, t_stuff *extra);
 void			offset_adjust(t_stack *stack, t_stuff *extra);
-
-
-
-
-
 #endif

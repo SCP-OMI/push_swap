@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 16:35:17 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/04 05:40:43 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/06 04:33:19 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strlon(char **str)
 void	chunk_utils(t_stack *stack, t_stuff *extra)
 {
 	stack->middle = stack->sizea / 2;
-	if (stack->sizea <= 16)
+	if (stack->sizea <= 15)
 		stack->offset = stack->sizea / 5;
 	else if (stack->sizea > 16 && stack->sizea <= 150)
 		stack->offset = stack->sizea / 8;
@@ -33,7 +33,6 @@ void	chunk_utils(t_stack *stack, t_stuff *extra)
 		stack->offset = stack->sizea / 18;
 	stack->start = stack->middle - stack->offset;
 	stack->end = stack->middle + stack->offset;
-
 }
 
 void	offset_adjust(t_stack *stack, t_stuff *extra)
@@ -44,4 +43,51 @@ void	offset_adjust(t_stack *stack, t_stuff *extra)
 	stack->end = stack->end + stack->offset;
 	if (stack->end > stack->len_arr)
 		stack->end = stack->len_arr - 2;
+}
+
+void	flush(t_stack *stack, int flag)
+{
+	int	i;
+
+	if (flag == 0)
+	{
+		i = stack->sizea - 1;
+		while (i > -1)
+		{
+			stack->arra[i + 1] = stack->arra[i];
+			i--;
+		}
+	}
+	else if (flag == 1)
+	{
+		i = stack->sizeb - 1;
+		while (i > -1)
+		{
+			stack->arrb[i + 1] = stack->arrb[i];
+			i--;
+		}
+	}
+}
+
+void	unflush(t_stack *stack, int flag)
+{
+	int	i;
+
+	i = 0;
+	if (flag == 0)
+	{
+		while (i < stack->sizeb)
+		{
+			stack->arrb[i] = stack->arrb[i + 1];
+			i++;
+		}
+	}
+	else if (flag == 1)
+	{
+		while (i < stack->sizea)
+		{
+			stack->arra[i] = stack->arra[i + 1];
+			i++;
+		}
+	}
 }

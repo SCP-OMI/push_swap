@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:50:07 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/04 04:48:24 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/06 04:33:52 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	rotate(t_stack *stack, t_stuff *extra, int flag)
 			i++;
 		}
 		stack->arrb[stack->sizeb - 1] = extra->tmp;
-		write (1, "rb\n", 3);	
+		write (1, "rb\n", 3);
 	}
 }
 
@@ -108,52 +108,5 @@ void	push(t_stack *stack, int flag)
 		stack->sizeb++;
 		stack->sizea--;
 		write(1, "pb\n", 3);
-	}
-}
-
-void	flush(t_stack *stack, int flag)
-{
-	int	i;
-
-	if (flag == 0)
-	{
-		i = stack->sizea - 1;
-		while (i > -1)
-		{
-			stack->arra[i + 1] = stack->arra[i];
-			i--;
-		}
-	}
-	else if (flag == 1)
-	{
-		i = stack->sizeb - 1;
-		while (i > -1)
-		{
-			stack->arrb[i + 1] = stack->arrb[i];
-			i--;
-		}
-	}
-}
-
-void	unflush(t_stack *stack, int flag)
-{
-	int	i;
-
-	i = 0;
-	if (flag == 0)
-	{
-		while (i < stack->sizeb)
-		{
-			stack->arrb[i] = stack->arrb[i + 1];
-			i++;
-		}
-	}
-	else if (flag == 1)
-	{
-		while (i < stack->sizea)
-		{
-			stack->arra[i] = stack->arra[i + 1];
-			i++;
-		}
 	}
 }

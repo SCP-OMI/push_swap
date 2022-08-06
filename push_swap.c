@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:04:47 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/04 22:27:03 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/06 04:30:11 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	main(int ac, char **av)
 {
 	t_stack	stack;
 	t_stuff	*extra;
-	int i = 0;
 
 	extra = join_split(av);
 	fill_my_stack(&stack, extra);
@@ -24,16 +23,11 @@ int	main(int ac, char **av)
 		return (write(2, "Dups\n", 5));
 	check_if_sorted(&stack);
 	push_swap_algo(&stack, extra);
-	printf("---stack a--- ---stack b---\n");
-	while (i < extra->len)
-	{
-		printf("-----(%d)-----     -----(%d)-----\n", stack.arra[i], stack.arrb[i]);
-		i++;
-	}
 }
 
 t_stuff	*join_split(char **av)
 {
+	char		*tmp;
 	t_stuff		*extra;
 
 	extra = malloc(sizeof(t_stuff));
@@ -41,8 +35,12 @@ t_stuff	*join_split(char **av)
 	extra->str = ft_strdup("");
 	while (av[extra->i])
 	{
+		tmp = extra->str;
 		extra->str = ft_strjoin(extra->str, av[extra->i]);
+		free(tmp);
+		tmp = extra->str;
 		extra->str = ft_strjoin(extra->str, " ");
+		free(tmp);
 		extra->i++;
 	}
 	extra->i = 0;
@@ -62,7 +60,8 @@ void	fill_my_stack(t_stack *stacks, t_stuff *extra)
 		stacks->arra[extra->i] = ft_atoi(extra->str1[extra->i]);
 		extra->sorted_array[extra->i] = ft_atoi(extra->str1[extra->i]);
 		stacks->sizea++;
+		free(extra->str1[extra->i]);
 		extra->i++;
 	}
-		stacks->sizeb = 0;
+	stacks->sizeb = 0;
 }

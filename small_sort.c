@@ -6,11 +6,16 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:09:19 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/04 04:12:26 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/06 04:31:25 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
+
+void	two_sort(t_stack *stack, t_stuff *stuff)
+{
+	swap(stack, 0);
+}
 
 void	three_sort(t_stack *stack, t_stuff *extra)
 {
@@ -21,7 +26,6 @@ void	three_sort(t_stack *stack, t_stuff *extra)
 	one = stack->arra[0];
 	two = stack->arra[1];
 	three = stack->arra[2];
-
 	if ((one > two) && (two < three) && (one < three))
 		swap(stack, 0);
 	else if ((one > two) && (two > three))

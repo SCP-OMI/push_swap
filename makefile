@@ -1,6 +1,6 @@
 NAME = PUSH_SWAP
 
-CFLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS	= -Wall -Wextra -Werror
 
 SRCS = push_swap.c ft_split.c ft_substr.c ft_atoi.c error_handling.c helpersV2.c small_sort.c operations.c not_so_small_sort.c helpers.c push_swap_utils.c
 OBJS =	$(SRCS:.c=.o)
