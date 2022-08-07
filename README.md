@@ -5,4 +5,6 @@ In this small project, we learn how to sort a stack of numbers using nothing but
 Stay tunned for a walkthrough of the project.
 
 
-# Small description
+### Small description
+
+# Now what is push swap?
