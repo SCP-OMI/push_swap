@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:52:51 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/06 04:31:03 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/07 02:03:44 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	check_if_sorted(t_stack *stack)
 	}
 	if (i == stack->sizea - 1)
 	{	
-		write(2, "Your shit is sorted already\n", 28);
+		write(2, "Error: Your shit is sorted already\n", 35);
 		exit (0);
 	}
 }

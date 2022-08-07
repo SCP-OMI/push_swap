@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:42:02 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/06 04:56:23 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/07 03:58:14 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,26 +33,23 @@ void	chunk_sort(t_stack *stack, t_stuff *extra)
 		}
 		offset_adjust(stack, extra);
 	}
-	exit(1);
 	chunk_sort_v2(stack, extra);
 }
 
 void	chunk_sort_v2(t_stack *stack, t_stuff *extra)
 {
-	stack->last_index = stack->len_arr - 2;
+	stack->last_index = extra->len - 1;
 	stack->down = 0;
 	while (stack->sizeb > 0 || stack->down != 0)
 	{
-		extra->ret = check_max_val_index(stack, extra);
-		if (extra->ret != -1)
-		{
+		extra->mvi = check_max_val_index(stack, extra);
+		if (extra->mvi != -1)
 			cont(stack, extra);
-		}
 		else
 		{
 			if (stack->down > 0)
 			{
-				reverse_rotate(stack, extra, 1);
+				reverse_rotate(stack, extra, 0);
 				stack->down--;
 				stack->last_index--;
 			}
@@ -76,26 +73,23 @@ int	check_max_val_index(t_stack *stack, t_stuff *extra)
 
 void	cont(t_stack *stack, t_stuff *extra)
 {
-	while (1)
+	if (extra->sorted_array[stack->last_index] == stack->arrb[0])
 	{
-		if (extra->sorted_array[stack->last_index] == stack->arrb[0])
-		{
-			push(stack, 0);
-			stack->last_index--;
-			return ;
-		}
-		else if (stack->down == 0
-			|| stack->arrb[0] > stack->arra[stack->sizea - 1])
-		{
-			push(stack, 0);
-			rotate(stack, extra, 0);
-			stack->down++;
-		}
-		else if (extra->ret < stack->sizeb / 2)
-		{
-			rotate(stack, extra, 1);
-		}
-		else if (extra->ret >= stack->sizeb / 2)
-			reverse_rotate(stack, extra, 1);
+		push(stack, 0);
+		stack->last_index--;
+		return ;
 	}
+	else if (stack->down == 0
+		|| stack->arrb[0] > stack->arra[stack->sizea - 1])
+	{
+		push(stack, 0);
+		rotate(stack, extra, 0);
+		stack->down++;
+	}
+	else if (extra->mvi <= stack->sizeb / 2)
+	{
+		rotate(stack, extra, 1);
+	}
+	else if (extra->mvi > stack->sizeb / 2)
+		reverse_rotate(stack, extra, 1);
 }

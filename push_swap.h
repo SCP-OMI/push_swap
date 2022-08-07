@@ -6,11 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:36:13 by mcharouh          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/08/06 04:32:24 by mcharouh         ###   ########.fr       */
-=======
-/*   Updated: 2022/08/05 23:53:15 by mcharouh         ###   ########.fr       */
->>>>>>> f3fa4c154689f2323526d1c6ca5ad229c8622184
+/*   Updated: 2022/08/07 03:58:14 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +23,6 @@ typedef struct s_stack
 	int	sizeb;
 	int	*arra;
 	int	*arrb;
-	int	len_arr;
 	int	small_num;
 	int	big_num;
 	int	small_index;
@@ -49,7 +44,7 @@ typedef struct s_stuff
 	int		i;
 	int		len;
 	int		tmp;
-	int		ret;
+	int		mvi;
 }	t_stuff;
 
 int				ft_atoi(const char *str);
@@ -96,14 +91,5 @@ void			cont(t_stack *stack, t_stuff *extra);
 int				check_max_val_index(t_stack *stack, t_stuff *extra);
 void			chunk_sort_v2(t_stack *stack, t_stuff *extra);
 void			offset_adjust(t_stack *stack, t_stuff *extra);
-<<<<<<< HEAD
-=======
-void			sort(t_stuff *extra, t_stack *data);
 
-
-
-
-
-
->>>>>>> f3fa4c154689f2323526d1c6ca5ad229c8622184
 #endif
