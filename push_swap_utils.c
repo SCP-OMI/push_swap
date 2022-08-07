@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:52:51 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/07 02:03:44 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/07 17:12:43 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,9 @@ char	*ft_strdup(const char *s)
 	return (dest);
 }
 
-size_t	ft_strlen(const char *str)
+long	ft_strlen(const char *str)
 {
-	size_t	i;
+	long	i;
 
 	i = 0;
 	while (str[i] != '\0')

@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, long len)
 {
-	size_t	i;
+	long	i;
 	char	*str;
 
 	if (!s)

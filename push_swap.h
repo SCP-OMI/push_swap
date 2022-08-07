@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:36:13 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/07 03:58:14 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:36:18 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,10 @@ t_stuff			*join_split(char **av);
 //FT_SPLIT STUFF//
 char			**ft_split(char const *s, char c);
 static void		char_count(const char *s, char c, char	**split);
-static int		ft_free(char **split, size_t j);
-static size_t	word_count(char const *s, char c);
-size_t			ft_strlen(const char *str);
-char			*ft_substr(char const *s, unsigned int start, size_t len);
+static int		ft_free(char **split, long j);
+static long		word_count(char const *s, char c);
+long			ft_strlen(const char *str);
+char			*ft_substr(char const *s, unsigned int start, long len);
 char			*ft_strdup(const char *s);
 //HELPER FUNCTIONS//
 int				arr_len(int **str);
@@ -91,5 +91,6 @@ void			cont(t_stack *stack, t_stuff *extra);
 int				check_max_val_index(t_stack *stack, t_stuff *extra);
 void			chunk_sort_v2(t_stack *stack, t_stuff *extra);
 void			offset_adjust(t_stack *stack, t_stuff *extra);
+void			check_dub_quotes(char **av);
 
 #endif

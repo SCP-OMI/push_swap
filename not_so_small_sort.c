@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:42:02 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/07 03:58:14 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/07 17:42:03 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ void	cont(t_stack *stack, t_stuff *extra)
 	{
 		push(stack, 0);
 		stack->last_index--;
-		return ;
 	}
 	else if (stack->down == 0
 		|| stack->arrb[0] > stack->arra[stack->sizea - 1])

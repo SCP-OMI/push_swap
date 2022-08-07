@@ -6,16 +6,16 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 11:15:24 by ahamdy            #+#    #+#             */
-/*   Updated: 2022/05/18 17:47:41 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/07 17:12:43 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static size_t	word_count(char const *s, char c)
+static long	word_count(char const *s, char c)
 {
-	size_t	i;
-	size_t	count;
+	long	i;
+	long	count;
 
 	i = 0;
 	count = 0;
@@ -32,7 +32,7 @@ static size_t	word_count(char const *s, char c)
 	return (count);
 }
 
-static int	ft_free(char **split, size_t j)
+static int	ft_free(char **split, long j)
 {
 	if (split[j])
 		return (0);
@@ -45,9 +45,9 @@ static int	ft_free(char **split, size_t j)
 
 static void	char_count(const char *s, char c, char	**split)
 {
-	size_t	count;
-	size_t	i;
-	size_t	j;
+	long	count;
+	long	i;
+	long	j;
 
 	count = 0;
 	j = 0;
@@ -73,7 +73,7 @@ static void	char_count(const char *s, char c, char	**split)
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	size_t	count;
+	long	count;
 
 	if (!s)
 		return (NULL);

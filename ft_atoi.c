@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:32:21 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/06 04:32:07 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:36:07 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	put_error(void)
 	exit (1);
 }
 
-int	check_edges(size_t result, int sign)
+int	check_edges(long long result, int sign)
 {
 	if (result >= 2147483647 && sign == 1)
 		put_error();
@@ -29,9 +29,9 @@ int	check_edges(size_t result, int sign)
 
 int	ft_atoi(const char *str)
 {
-	int		sign;
-	size_t	result;
-	int		i;
+	int			sign;
+	long long	result;
+	int			i;
 
 	result = 0;
 	sign = 1;
@@ -49,6 +49,8 @@ int	ft_atoi(const char *str)
 		if (str[i] < '0' || str[i] > '9')
 			put_error();
 		result = (result * 10) + str[i++] - '0';
+		if (result > 2147483647)
+			put_error();
 	}
 	return (check_edges(result, sign));
 }

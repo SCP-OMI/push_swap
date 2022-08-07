@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:11:33 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/05 23:55:50 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/07 17:56:24 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,20 @@ int	check_dup(t_stuff *extra, t_stack *data)
 
 	i = 0;
 	sort(extra, data);
-	while (extra->sorted_array[i])
+	while (i < extra->len)
 	{
 		j = i + 1;
 		while (j < extra->len)
 		{
 			if (extra->sorted_array[i] == extra->sorted_array[j])
-				return (1);
+			{
+				return (0);
+			}
 			j++;
 		}
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
 void	sort(t_stuff *extra, t_stack *data)
@@ -54,5 +56,21 @@ void	sort(t_stuff *extra, t_stack *data)
 			i++;
 		}
 		j++;
+	}
+}
+
+void	check_dub_quotes(char **av)
+{
+	int	i;
+
+	i = 0;
+	while (av[i])
+	{
+		if (av[i][0] == '\0')
+		{
+			write(1, "empty quote\n", 13);
+			exit(1);
+		}
+		i++;
 	}
 }

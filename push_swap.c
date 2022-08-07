@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:04:47 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/06 04:30:11 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/07 17:56:51 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ int	main(int ac, char **av)
 	t_stack	stack;
 	t_stuff	*extra;
 
+	check_dub_quotes(av);
 	extra = join_split(av);
 	fill_my_stack(&stack, extra);
-	if (check_dup(extra, &stack))
+	if (!check_dup(extra, &stack))
 		return (write(2, "Dups\n", 5));
 	check_if_sorted(&stack);
 	push_swap_algo(&stack, extra);
