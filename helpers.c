@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 22:02:30 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/06 04:30:45 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/09 22:23:41 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,28 @@ void	big_index(t_stack *stack)
 		i++;
 	}
 	stack->big_index = i;
+}
+
+t_stuff	*join_split(char **av)
+{
+	char		*tmp;
+	t_stuff		*extra;
+
+	extra = malloc(sizeof(t_stuff));
+	extra->i = 1;
+	extra->str = ft_strdup("");
+	while (av[extra->i])
+	{
+		tmp = extra->str;
+		extra->str = ft_strjoin(extra->str, av[extra->i]);
+		free(tmp);
+		tmp = extra->str;
+		extra->str = ft_strjoin(extra->str, " ");
+		free(tmp);
+		extra->i++;
+	}
+	extra->i = 0;
+	extra->str1 = ft_split(extra->str, ' ');
+	extra->len = ft_strlon(extra->str1);
+	return (extra);
 }

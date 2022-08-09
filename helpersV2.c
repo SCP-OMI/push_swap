@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 16:35:17 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/08 18:55:34 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/09 22:23:06 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ void	offset_adjust(t_stack *stack, t_stuff *extra)
 	if (stack->start < 0)
 		stack->start = 0;
 	stack->end = stack->end + stack->offset;
-	if (stack->end > extra->len)
-		stack->end = extra->len - 1;
+	if (stack->end >= extra->len)
+		stack->end = extra->len;
 }
 
 void	flush(t_stack *stack, int flag)

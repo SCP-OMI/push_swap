@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:42:02 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/09 04:06:11 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/09 22:21:27 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,17 @@ void	chunk_sort(t_stack *stack, t_stuff *extra)
 	chunk_utils(stack, extra);
 	while (stack->sizea != 0)
 	{
-		while (stack->sizeb < (stack->end - stack->start) + 1)
+		while (stack->sizeb != (stack->end - stack->start))
 		{
 			if (stack->arra[0] >= extra->sorted_array[stack->start]
-				&& stack->arra[0] <= extra->sorted_array[stack->end])
+				&& stack->arra[0] <= extra->sorted_array[stack->end - 1])
 			{
 				push(stack, 1);
 				if (stack->arrb[0] < extra->sorted_array[stack->middle])
 					rotate(stack, extra, 1);
 			}
 			else
-			{
-				i++;
 				rotate(stack, extra, 0);
-			}
 		}
 		offset_adjust(stack, extra);
 	}
