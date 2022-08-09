@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:42:02 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/09 03:47:39 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/09 04:06:11 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	chunk_sort(t_stack *stack, t_stuff *extra)
 {
-	int i = 0;
-
 	chunk_utils(stack, extra);
 	while (stack->sizea != 0)
 	{
