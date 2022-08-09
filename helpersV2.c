@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 16:35:17 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/07 01:47:19 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/08 18:55:34 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	chunk_utils(t_stack *stack, t_stuff *extra)
 	stack->middle = stack->sizea / 2;
 	if (stack->sizea <= 15)
 		stack->offset = stack->sizea / 5;
-	else if (stack->sizea > 16 && stack->sizea <= 150)
+	else if (stack->sizea <= 150)
 		stack->offset = stack->sizea / 8;
 	else if (stack->sizea > 150)
 		stack->offset = stack->sizea / 18;

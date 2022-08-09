@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:11:33 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/07 17:56:24 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/08 02:38:32 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,34 @@ void	check_dub_quotes(char **av)
 		}
 		i++;
 	}
+}
+
+int	ft_is_all_num(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while (str[i])
+	{
+		if (!(str[i] >= '0' && str[i] <= '9'))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int	ft_check_args(char **str)
+{
+	int	i;
+
+	i = 1;
+	while (str[i])
+	{
+		if (!ft_is_all_num(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
 }
