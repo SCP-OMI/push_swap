@@ -6,7 +6,7 @@
 /*   By: mcharouh <mcharouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:32:21 by mcharouh          #+#    #+#             */
-/*   Updated: 2022/08/08 01:45:42 by mcharouh         ###   ########.fr       */
+/*   Updated: 2022/08/10 22:10:17 by mcharouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	put_error(void)
 
 int	check_edges(long long result, int sign)
 {
-	if (result >= 2147483647 && sign == 1)
+	if (result > 2147483647 && sign == 1)
 		put_error();
-	if (result >= 2147483648 && sign == -1)
+	if (result > 2147483648 && sign == -1)
 		put_error();
 	return (result *= sign);
 }
