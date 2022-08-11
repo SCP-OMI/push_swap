@@ -167,7 +167,86 @@ I personally went with the chunks method that I thank my friend and peer [Msouiy
 It is worth to mention that the scoring system of the project (which decides the final grade) is based on the amount of instructions used to solve a set of numbers (3, 5, 100, 500)
 In short, less is better.
 ~~~
- 
+# HOW TO SORT
+
+This is where the real fun begins.  
+Personally I opted to have 3 sorting algos ("2", "3", "4<->15", "16<->500").
+~~~
+Yes, i understand that i've mentionned 4 different "algorithms" but like cmon..
+~~~
+### STACK LENGTH : 2
+---
+In this case; you just need to check if the stack is already sorted or not, it's basically either the stack is solved or isn't, in that case you just need to swap the stack.  
+See? I told you, it's not really an algorithm now is it?
+
+### STACK LENGTH : 3
+---
+Alright; in this i won't lie... I hard coded the crap out of it, I followed this Medium article where it described how to handle all the cases you can come across, five to be exact (3! = 6 - 1 "one case is already sorted")
+
+### STACK LENGTH : 4<->15 (mid sort)
+This one is a bit harder than the prior but less complicated "LIKE A LOT LESS".  
+So, the way I went with it is to use a function to find the smallest number in the STACK A and push it to STACK B.  
+We keep doing that untill we have 3 Numbers in STACK A, sort them using the prior algorithm and then pushing back all the numbers back to STACK A.  
+Since we have pushed the smallest number repeatedly for the to STACK B, the latter will have all the numbers in it reverse sorted, so by just performing a simple push of all the numbers will sort your STACK A, easily.  
+The logic should look something like this 
+
+```c
+void	mid_sort(---Your Data---)
+{
+	int	count; //Keeps in mind the number of elements in STACK A
+	int	relay; //Keeps in mind the number of elements pushed in STACK B
+
+	relay = 0;
+	count = stack->sizea;
+	while (count != 3)
+	{
+		wiggle_small(---Your Data---); //FCT that takes the smallest element in STACK A and makes it the Head of the STACK A
+		push(B);
+		count--;
+		relay++;
+	}
+	three_sort(---Your Data---);
+	while (relay != 0)
+	{
+		push(A);
+		relay--;
+	}
+}
+```
+>ANOTHER DISCLAIMER : This is just a way i found i can do, it was used by other people aswell, but that doesn't mean there aren't other ways to go by this, you might find a better algorithm result wise; if so please don't hesitate to create a pull request and propose other methods
+
+### STACK LENGTH : 16<->500 (chunk_sort)
+This is the big one...   
+Now not to be concerned; this might be somewhat complicated while reading it the first time; but after you give it your attention; you realise that it's not really that complicated.  
+Before we start, i would like to refer you to my peer's [article](https://medium.com/@msouiyeh/not-your-typical-42network-push-swap-cc583f863a90) about the whole project with the chunk method explained in his own words.  
+>Now to clarify, this small README is more of a walkthrough to the project and less a general idea of how the project should be handled, the approach that my peer went with; both are important, you can choose which suits you better and go with it.
+
+Here is how it goes :
+
+This sorting method can be summed into two steps :  
+- [ ] Pushing from STACK A to STACK B (chunk sort).  
+- [ ] Pushing from STACK B to STACK A (actuall sort).  
+
+
+### STACK A TO STACK B
+---
+In this part of the logic, you need to sort the elements while pushing them to the other STACK, but this sort will be more based on the chunk level rather than the actual form.  
+Now, you might be asking yourself : "WHAT?"  
+And that would be a good question...  
+To explain this, i'll try to vizualise this a bit.  
+Imagine we have a stack of 9 Integers...
+
+> Unsorted array -STACK A- : 2 3 1 5 6 8 7 9 4
+
+After we finish this part of the solve, our STACK B should resemble something like this :
+
+> Expected "Chunk sorted" array -STACK B- : 8 9 7 | 4 6 5 | 3 1 2 |
+
+Notice how STACK B is not actually sorted, but the values in the first third are in their right approximate position, same thing for the second and third chunks of the stack B.  
+This is what i meant by "this sort will be more based on the chunk level rather than the actual form". 
+
+I think i clarified this part enough, so for the how to :
+	-->
 
 
 
